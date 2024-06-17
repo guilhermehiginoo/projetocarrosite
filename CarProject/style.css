@@ -105,17 +105,6 @@ section {
                 }
             }
         }
-
-        &::before {
-            content: '';
-            position: absolute;
-            height: 200px;
-            width: 100%;
-            top: 50%;
-            border-top: 1px solid white;
-        }
-
-
     }
 
     .arrows {
@@ -177,13 +166,13 @@ section {
             & li {
                 width: 50px;
                 height: 5px;
-                background-color: #beff1b;
+                background-color: #ffffff;
                 border-radius: 5px;
                 transition: 0.5s;
             }
 
             & .active {
-                background-color: white;
+                background-color: rgb(238, 111, 234);
             }
         }
     }
@@ -192,7 +181,8 @@ section {
 
 section {
     & .list {
-    --calculation: 1;    
+        --calculation: 1;
+
         & .item {
             transform: translateX(calc(100vw * var(--calculation)));
             transition: 0.5s;
@@ -200,6 +190,12 @@ section {
 
 
             & .car-img {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 70%;
+                z-index: 1;
+
                 & img {
                     transform: rotate(0);
                     transition: 0.5s;
@@ -233,6 +229,7 @@ section {
                 }
 
                 & h2 {
+                    z-index: 2;
                     transition-delay: 0.5s;
                 }
 
@@ -279,19 +276,19 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-  }
-  
-  footer p {
+}
+
+footer p {
     margin: 0;
     font-size: 14px;
     color: #333;
-  }
-  
-  footer a {
+}
+
+footer a {
     color: #007bff;
     text-decoration: none;
-  }
-  
-  footer a:hover {
+}
+
+footer a:hover {
     text-decoration: underline;
-  }
+}
