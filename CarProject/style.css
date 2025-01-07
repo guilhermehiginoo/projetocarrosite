@@ -293,7 +293,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Chatbot Icon */
 .chatbot-icon {
     position: fixed;
     bottom: 20px;
@@ -307,7 +306,7 @@ footer a:hover {
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    z-index: 1000; /* Mantém acima de outros elementos */
+    z-index: 1000;
 }
 
 .chatbot-icon img {
@@ -315,7 +314,6 @@ footer a:hover {
     height: 50%;
 }
 
-/* Inicialmente oculta o widget */
 typebot-standard {
     display: none;
     position: fixed;
@@ -327,9 +325,4 @@ typebot-standard {
     border-radius: 10px;
     z-index: 1000;
     background: #fff;
-}
-
-/* Exibe o chatbot quando ativo */
-.typebot-active {
-    display: block !important;
 }
