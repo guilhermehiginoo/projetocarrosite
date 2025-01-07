@@ -119,8 +119,17 @@
     </section>
 
     <footer>
-        <p>Página criada por <a href="https://github.com/guilhermehiginoo" target="_blank">@guilhermehiginoo</a></p>
-    </footer>
+    <p>Página criada por <a href="https://github.com/guilhermehiginoo" target="_blank">@guilhermehiginoo</a></p>
+    
+    <!-- Chatbot -->
+    <script type="module">
+        import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3/dist/web.js';
+
+        Typebot.initStandard({ typebot: "hello-world-gui" });
+    </script>
+
+    <typebot-standard style="width: 100%; height: 600px;"></typebot-standard>
+</footer>
 
     <script src="./script.js"></script>
 </body>
