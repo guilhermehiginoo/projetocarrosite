@@ -120,25 +120,34 @@
 
     <footer>
     <p>Página criada por <a href="https://github.com/guilhermehiginoo" target="_blank">@guilhermehiginoo</a></p>
-    
+
     <!-- Chatbot Icon -->
-<div class="chatbot-icon" id="chatbotToggle">
-    <img src="https://cdn-icons-png.flaticon.com/512/2040/2040526.png" alt="Chatbot Icon">
-</div>
+    <div class="chatbot-icon" id="chatbotToggle">
+        <img src="https://cdn-icons-png.flaticon.com/512/2040/2040526.png" alt="Chatbot Icon">
+    </div>
 
-<!-- Chatbot -->
-<typebot-standard id="chatbotWidget"></typebot-standard>
+    <!-- Chatbot Widget -->
+    <typebot-standard id="chatbotWidget" style="width: 400px; height: 600px; display: none;"></typebot-standard>
 
-<script>
-    const chatbotToggle = document.getElementById('chatbotToggle');
-    const chatbotWidget = document.getElementById('chatbotWidget');
+    <!-- Chatbot Script -->
+    <script type="module">
+        import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3/dist/web.js';
 
-    chatbotToggle.addEventListener('click', () => {
-        chatbotWidget.classList.toggle('typebot-active');
-    });
-</script>
+        Typebot.initStandard({ typebot: "hello-world-gui" });
+    </script>
 
+    <!-- Chatbot Toggle Script -->
+    <script>
+        const chatbotToggle = document.getElementById('chatbotToggle');
+        const chatbotWidget = document.getElementById('chatbotWidget');
+
+        chatbotToggle.addEventListener('click', () => {
+            const isVisible = chatbotWidget.style.display === 'block';
+            chatbotWidget.style.display = isVisible ? 'none' : 'block';
+        });
+    </script>
 </footer>
+
 
     <script src="./script.js"></script>
 </body>
