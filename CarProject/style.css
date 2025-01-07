@@ -292,3 +292,44 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/* Chatbot Icon */
+.chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #791fd3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 1000; /* Garantir que fique acima de outros elementos */
+}
+
+.chatbot-icon img {
+    width: 50%;
+    height: 50%;
+}
+
+/* Oculta o chatbot padrão do Typebot inicialmente */
+typebot-standard {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 400px;
+    height: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1000;
+    background: #fff;
+}
+
+/* Exibir o chatbot quando ativo */
+.typebot-active {
+    display: block !important;
+}
