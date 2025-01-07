@@ -121,14 +121,23 @@
     <footer>
     <p>Página criada por <a href="https://github.com/guilhermehiginoo" target="_blank">@guilhermehiginoo</a></p>
     
-    <!-- Chatbot -->
-    <script type="module">
-        import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3/dist/web.js';
+    <!-- Chatbot Icon -->
+<div class="chatbot-icon" id="chatbotToggle">
+    <img src="https://cdn-icons-png.flaticon.com/512/2040/2040526.png" alt="Chatbot Icon">
+</div>
 
-        Typebot.initStandard({ typebot: "hello-world-gui" });
-    </script>
+<!-- Chatbot -->
+<typebot-standard id="chatbotWidget"></typebot-standard>
 
-    <typebot-standard style="width: 100%; height: 600px;"></typebot-standard>
+<script>
+    const chatbotToggle = document.getElementById('chatbotToggle');
+    const chatbotWidget = document.getElementById('chatbotWidget');
+
+    chatbotToggle.addEventListener('click', () => {
+        chatbotWidget.classList.toggle('typebot-active');
+    });
+</script>
+
 </footer>
 
     <script src="./script.js"></script>
